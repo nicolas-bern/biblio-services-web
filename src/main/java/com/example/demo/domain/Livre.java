@@ -17,16 +17,19 @@ public class Livre implements Serializable {
 
     private String description;
 
+    private boolean isEmprunt;
+
 
     public Livre() {
 
     }
 
-    public Livre(Long id, String nom, String auteur, String description) {
+    public Livre(Long id, String nom, String auteur, String description, boolean isEmprunt) {
         this.id = id;
         this.nom = nom;
         this.auteur = auteur;
         this.description = description;
+        this.isEmprunt = isEmprunt;
     }
 
     public Long getId() {
@@ -43,6 +46,10 @@ public class Livre implements Serializable {
 
     public String getDescription() {
         return description;
+    }
+
+    public boolean getIsEmprunt(){
+        return isEmprunt;
     }
 
     @Override
