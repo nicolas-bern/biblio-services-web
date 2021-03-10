@@ -29,14 +29,12 @@ class LivreRepositoryTest {
     @Test
     void findByNomTest() {
         livre = new Livre(666l, "Livre test", "Unit", "Ceci est une description", false);
+
         when(livreRepository.findByNom(livre.getNom())).thenReturn(livre);
+
         Livre livreFound = livreRepository.findByNom("Livre test");
         verify(livreRepository).findByNom("Livre test");
         assertNotNull(livreFound);
         assertEquals("Unit", livreFound.getAuteur());
-    }
-
-    @Test
-    void findByAuteurTest() {
     }
 }

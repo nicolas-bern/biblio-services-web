@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface LivreRepository extends CrudRepository<Livre, Long> {
     Livre findByNom(String nom);
-    Livre findByAuteur(String auteur);
+    List<Livre> findByAuteur(String auteur);
 }
